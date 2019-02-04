@@ -1,5 +1,5 @@
 # StackOverflow-datascience-atlas (SODA)
-![logo](./pics/logo.png = =100x20)
+<img src="./pics/logo.png" alt="drawing" width="200"/>
 
 StackOverflow is the largest online community for programers to learn, share their knowledge, and advance their career.
 
