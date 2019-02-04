@@ -20,7 +20,7 @@ However, if we take detailed look at the post questions, less than 10% new users
 
 <img src="./pics/new_user_pie.png" alt="drawing" width="500"/>
 
-Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. 
+Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
 <img src="./pics/word_map.png" alt="drawing" width="500"/>
 
