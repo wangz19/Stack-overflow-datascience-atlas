@@ -2,7 +2,7 @@
 <img src="./pics/logo.png" alt="drawing" width="200"/>
 
 StackOverflow is the largest online community for programers to learn, share their knowledge, and advance their career.
-
+## 1.Introduction
 StackOverflow-data science-atlas (SODA)
 The project "SODA" is intended to build language facilitation app for both new registers and coding gurus to format their questions on StackOverflow. According to the exploration data analysis [(Link)](https://www.kaggle.com/zehaiwang/stackoverflow-preliminary-eda), less than 10% of new registers from 2017-18 post question  within one-year, what is more, only 3.6% percent of their posted question got accepted answers. This indicating, we should provide more insight suggestions and assistance for newbies to make them truly taking advantage of the community. Detailed data queries can be found in [this notebook](https://github.com/wangz19/Stack-overflow-datascience-atlas/blob/master/notebook/preliminary_query.ipynb)
 
@@ -18,16 +18,9 @@ User increase per year    |  New users with their first post
 :-------------------------:|:-------------------------:
 ![](./pics/new_users.png)  |  ![](./pics/new_user_pie.png)
 
-     New Users        |   New Users post timeline
-:-------------------------:|:-------------------------:
-<img src="./pics/new_users.png" alt="drawing" width="500"/>  | <img src="./pics/new_user_pie.png" alt="drawing" width="500"/>
 
-
-
-
-
-
-
+## 2.What makes a good question?
+### 2.1 Metrics
 Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
 <img src="./pics/word_map.png" alt="drawing" width="500"/>
