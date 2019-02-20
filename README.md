@@ -10,13 +10,14 @@ The project uses of 160GB metadata of over 30 million post questions/answers fro
 
 According to the recent [2018 survey](https://www.kaggle.com/stackoverflow/stack-overflow-2018-developer-survey?utm_medium=partner&utm_source=stackoverflow&utm_campaign=developer+survey+2018), a quarter of the SO users are students and over 1/3rd are from non-CS majors.
 
-        |       
+  fig.1      |       fig.2
 :-------------------------:|:-------------------------:
 ![](./pics/student_users.png)  |  ![](./pics/Community percentage of majors.png)
 
+
 As we can see from the following plot, the registered users are over 1 Million/year and it keep rising-up. However, if we take detailed look at the post questions, less than 10% new users post their own questions within a year. 
 
-User increase per year    |  New users with their first post
+fig.3 User increase per year    |  fig.4 New users with their first post
 :-------------------------:|:-------------------------:
 ![](./pics/new_users.png)  |  ![](./pics/new_user_pie.png)
 
