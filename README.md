@@ -13,7 +13,8 @@ According to the recent [2018 survey](https://www.kaggle.com/stackoverflow/stack
 <img src="./pics/student_users.png" alt="drawing" width="500"/> <img src="./pics/Community percentage of majors.png" alt="drawing" width="700"/>
 
 As we can see from the following plot, the registered users are over 1 Million/year and it keep rising-up. However, if we take detailed look at the post questions, less than 10% new users post their own questions within a year. 
-             |  
+
+     New Users        |   New Users post timeline
 :-------------------------:|:-------------------------:
 <img src="./pics/new_users.png" alt="drawing" width="500"/>  | <img src="./pics/new_user_pie.png" alt="drawing" width="500"/>
 
