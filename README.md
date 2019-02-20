@@ -12,13 +12,16 @@ According to the recent [2018 survey](https://www.kaggle.com/stackoverflow/stack
 
 <img src="./pics/student_users.png" alt="drawing" width="500"/> <img src="./pics/Community percentage of majors.png" alt="drawing" width="700"/>
 
-As we can see from the following plot, the registered users are over 1 Million/year and it keep rising-up.
+As we can see from the following plot, the registered users are over 1 Million/year and it keep rising-up. However, if we take detailed look at the post questions, less than 10% new users post their own questions within a year. 
+             |  
+:-------------------------:|:-------------------------:
+<img src="./pics/new_users.png" alt="drawing" width="500"/>  | <img src="./pics/new_user_pie.png" alt="drawing" width="500"/>
 
-<img src="./pics/new_users.png" alt="drawing" width="500"/>
 
-However, if we take detailed look at the post questions, less than 10% new users post their own questions within a year. 
 
-<img src="./pics/new_user_pie.png" alt="drawing" width="500"/>
+
+
+
 
 Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
