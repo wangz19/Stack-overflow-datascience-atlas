@@ -12,7 +12,7 @@ According to the recent [2018 survey](https://www.kaggle.com/stackoverflow/stack
 
   fig.1      |       fig.2
 :-------------------------:|:-------------------------:
-![](./pics/student_users.png)  |  ![](Stack-overflow-datascience-atlas/pics/Community percentage of majors.png)
+![](./pics/student_users.png)  |  ![](./pics/Community_percentage_of_majors.png)
 
 
 As we can see from the following plot, the registered users are over 1 Million/year and it keep rising-up. However, if we take detailed look at the post questions, less than 10% new users post their own questions within a year. 
