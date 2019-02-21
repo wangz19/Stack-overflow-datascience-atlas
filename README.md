@@ -27,43 +27,46 @@ This is the very first question we have to ask, in order to help the new users t
 
 <img src="./pics/metric_example.jpg" alt="metric example" width="600"/>
 
-We can see that, the "Score", "View Count" have strong correlation, "answer_counts" has positive correlation to other metric.
+We can see that, the "Score", "View Count" have strong correlation, "answer_counts" has positive correlation to other metric. Whether a question will get satisfied answers. Interstingly, the rate to get a satisfied answer has negative relationship with comments count. It suggests that more comments indicating problems
+<img src="./pics/accept_ans.png" alt="metric example" width="600"/>
+
 
 Intuitively, we would first investigate the "score", so I ploted the score using boxplot. The socre can range from -100 to 600, quite scattered distribution. I divided the questions into "good" and "bad" question.
 
 
 The first thing, we see a question is the title. Investigate the n-grams feature of "good" and "bad" questions titles.
 
-<img src="./pics/log_score.png" alt="drawing" width="500"/>
+<img src="./pics/log_score.png" alt="drawing" width="400"/>
 
-1-gram
-<img src="./pics/onegram_score.png" alt="drawing" width="500"/>
+1-gram(angular, "a full stack web application frame work" got the first place in good questions, while Php, sql, C# dominate the bad questions)
+<img src="./pics/onegram_score.png" alt="ngrams" width="500"/>
 
 2-gram
-<img src="./pics/bigram_score.png" alt="drawing" width="500"/>
+<img src="./pics/bigram_score.png" alt="ngrams" width="500"/>
 
 3-gram
-<img src="./pics/trigram_score.png" alt="drawing" width="500"/>
+<img src="./pics/trigram_score.png" alt="ngrams" width="500"/>
 
 Attracting questions, view counts measures how many uses is directed into your questions. At least it seems interesting, or it represent common issues.
 
+<img src="./pics/log_view_count.png" alt="ngrams" width="400"/>
 
-1-gram (angular, "a full stack web application frame work" got the first place in good questions, while Php, sql, C# dominate the bad questions)
 
 bigrams (More discriptive heavy question got lower score, seems that specified version in title)
+<img src="./pics/bigram_attention.png" alt="ngrams" width="500"/>
 
 trigram (Confirm what we found )
+<img src="./pics/trigram_attention.png" alt="ngrams" width="500"/>
 
-Whether a question will get satisfied answers. Interstingly, the rate to get a satisfied answer has negative relationship with comments count. It suggests that more comments indicating problems
+We can see that, Error massages in this case get alot more attentions, "typeError X X" and "import error" are the frequent trigram in this case. People tende to copy and paste the error massages and lead to the question. It suggest including the key work of error messages can greatly increase the attractivity of the question.
 
-
-We can see that, typeError or 
-
+Currently, I am using a compose metric combining "number of answers" and "number of views". 
+<img src="./pics/target.png" alt="target" width="400"/>
 
 
 Here, we perform further EDA and feature engineering, details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
 
-Currently, I am using a compose metric combining "number of answers" and "number of views". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
+The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
 <img src="./pics/word_map.png" alt="drawing" width="500"/>
 
