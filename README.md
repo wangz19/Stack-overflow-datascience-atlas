@@ -69,11 +69,11 @@ trigram (Confirm what we found )
 We can see that, Error massages in this case get alot more attentions, "typeError X X" and "import error" are the frequent trigram in this case. People tende to copy and paste the error massages and lead to the question. It suggest including the key work of error messages can greatly increase the attractivity of the question.
 
 Currently, I am using a compose metric combining "number of answers" and "number of views". 
-<img src="./pics/target.png" alt="target" width="400"/>
+<img src="./pics/target.png" alt="target" width="600"/>
 
 The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
-<img src="./pics/word_attention.jpg" alt="WordCloud" width="500"/>
+<img src="./pics/word_attention.jpg" alt="WordCloud" width="800"/>
 
 ## 3. Feature Engineering
 Here, we perform further EDA and feature engineering, generate meta-data related to the title, the body text. I use beautifully soup to help me clean HTML format in the body text. Details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
