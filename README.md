@@ -21,6 +21,8 @@ fig.3 User increase per year    |  fig.4 New users with their first post
 :-------------------------:|:-------------------------:
 ![](./pics/new_users.png)  |  ![](./pics/new_user_pie.png)
 
+We proposed to build a NLP model, provide scheme and suggestion based on raw problem (either 'Error Message" or "Problem descriptions" to format their attractive questions for a quick informative answers. Additional function, such as "automatic tagging" and "answers recommendation" can also be add-ons for the app.
+
 
 ## 2.What makes a good question?
 This is the very first question we have to ask, in order to help the new users to ask better questions. Let's see what do we have in hand, in the queried post table, we have "Score", "View Count", "Comment counts" ,"answer counts", "Whether it accepted answer".
@@ -28,6 +30,7 @@ This is the very first question we have to ask, in order to help the new users t
 <img src="./pics/metric_example.jpg" alt="metric example" width="600"/>
 
 We can see that, the "Score", "View Count" have strong correlation, "answer_counts" has positive correlation to other metric. Whether a question will get satisfied answers. Interstingly, the rate to get a satisfied answer has negative relationship with comments count. It suggests that more comments indicating problems
+
 <img src="./pics/accept_ans.png" alt="metric example" width="600"/>
 
 
@@ -39,12 +42,15 @@ The first thing, we see a question is the title. Investigate the n-grams feature
 <img src="./pics/log_score.png" alt="drawing" width="400"/>
 
 1-gram(angular, "a full stack web application frame work" got the first place in good questions, while Php, sql, C# dominate the bad questions)
+
 <img src="./pics/onegram_score.png" alt="ngrams" width="500"/>
 
 2-gram
+
 <img src="./pics/bigram_score.png" alt="ngrams" width="500"/>
 
 3-gram
+
 <img src="./pics/trigram_score.png" alt="ngrams" width="500"/>
 
 Attracting questions, view counts measures how many uses is directed into your questions. At least it seems interesting, or it represent common issues.
@@ -53,9 +59,11 @@ Attracting questions, view counts measures how many uses is directed into your q
 
 
 bigrams (More discriptive heavy question got lower score, seems that specified version in title)
+
 <img src="./pics/bigram_attention.png" alt="ngrams" width="500"/>
 
 trigram (Confirm what we found )
+
 <img src="./pics/trigram_attention.png" alt="ngrams" width="500"/>
 
 We can see that, Error massages in this case get alot more attentions, "typeError X X" and "import error" are the frequent trigram in this case. People tende to copy and paste the error massages and lead to the question. It suggest including the key work of error messages can greatly increase the attractivity of the question.
@@ -63,18 +71,23 @@ We can see that, Error massages in this case get alot more attentions, "typeErro
 Currently, I am using a compose metric combining "number of answers" and "number of views". 
 <img src="./pics/target.png" alt="target" width="400"/>
 
-
-Here, we perform further EDA and feature engineering, details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
-
 The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
-<img src="./pics/word_map.png" alt="drawing" width="500"/>
-
-We proposed to build a NLP model, provide scheme and suggestion based on raw problem (either 'Error Message" or "Problem descriptions" to format their attractive questions for a quick informative answers. Additional function, such as "automatic tagging" and "answers recommendation" can also be add-ons for the app.
+<img src="./pics/word_map.png" alt="WordCloud" width="500"/>
 
 ## 3. Feature Engineering
+Here, we perform further EDA and feature engineering, generate meta-data related to the title, the body text. I use beautifully soup to help me clean HTML format in the body text. Details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
+
+<img src="./pics/feature_corr.png" alt="Feature_compare" width="500"/>
+
+We further generate 773580 TFIDF features with sklearn TFIDF_vectorizer, and feed them into the training data_set.
+
 
 ## 4. Base model
+
+I build a simple logistic regression model, currently got accuracy 0.67xx and F1 score
+
+<img src="./pics/model.jpg" alt="Feature_compare" width="500"/>
 
 
 Tired of stare at the screen search clues for debugging? Grab a cup of SODA.
