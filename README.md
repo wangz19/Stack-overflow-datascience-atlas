@@ -78,7 +78,7 @@ The analysis provide detailed understand on what is a good and attractive questi
 ## 3. Feature Engineering
 Here, we perform further EDA and feature engineering, generate meta-data related to the title, the body text. I use beautifully soup to help me clean HTML format in the body text. Details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
 
-<img src="./pics/Feature_corr.png" alt="Feature_compare" width="500"/>
+<img src="./pics/features.png" alt="Feature_compare" width="800"/>
 
 We further generate 773580 TFIDF features with sklearn TFIDF_vectorizer, and feed them into the training data_set.
 
