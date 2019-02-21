@@ -26,7 +26,7 @@ fig.3 User increase per year    |  fig.4 New users with their first post
 ### 2.1 Metrics
 This is the very first question we have to ask, in order to help the new users to ask better questions. Let's see what do we have in hand, in the queried post table, we have "Score", "View Count", "Comment counts" ,"answer counts", "Whether it accepted answer".
 
-<img src="./pics/metric_example.jpg" alt="metric example" width="200"/>
+<img src="./pics/metric_example.jpg" alt="metric example" width="600"/>
 
 Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
