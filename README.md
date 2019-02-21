@@ -23,16 +23,56 @@ fig.3 User increase per year    |  fig.4 New users with their first post
 
 
 ## 2.What makes a good question?
-### 2.1 Metrics
 This is the very first question we have to ask, in order to help the new users to ask better questions. Let's see what do we have in hand, in the queried post table, we have "Score", "View Count", "Comment counts" ,"answer counts", "Whether it accepted answer".
 
 <img src="./pics/metric_example.jpg" alt="metric example" width="600"/>
 
-Here, we perform further EDA and feature engineering to learn what makes a success question. Currently, I set a compose metric combining "question score", "number of answers", "number of comments" and "time to get accepted answer". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
+We can see that, the "Score", "View Count" have strong correlation, "answer_counts" has positive correlation to other metric.
+
+Intuitively, we would first investigate the "score", so I ploted the score using boxplot. The socre can range from -100 to 600, quite scattered distribution. I divided the questions into "good" and "bad" question.
+
+
+The first thing, we see a question is the title. Investigate the n-grams feature of "good" and "bad" questions titles.
+
+<img src="./pics/log_score.png" alt="drawing" width="500"/>
+
+1-gram
+<img src="./pics/onegram_score.png" alt="drawing" width="500"/>
+
+2-gram
+<img src="./pics/bigram_score.png" alt="drawing" width="500"/>
+
+3-gram
+<img src="./pics/trigram_score.png" alt="drawing" width="500"/>
+
+Attracting questions, view counts measures how many uses is directed into your questions. At least it seems interesting, or it represent common issues.
+
+
+1-gram (angular, "a full stack web application frame work" got the first place in good questions, while Php, sql, C# dominate the bad questions)
+
+bigrams (More discriptive heavy question got lower score, seems that specified version in title)
+
+trigram (Confirm what we found )
+
+Whether a question will get satisfied answers. Interstingly, the rate to get a satisfied answer has negative relationship with comments count. It suggests that more comments indicating problems
+
+
+We can see that, typeError or 
+
+
+
+Here, we perform further EDA and feature engineering, details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
+
+Currently, I am using a compose metric combining "number of answers" and "number of views". The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
 <img src="./pics/word_map.png" alt="drawing" width="500"/>
 
 We proposed to build a NLP model, provide scheme and suggestion based on raw problem (either 'Error Message" or "Problem descriptions" to format their attractive questions for a quick informative answers. Additional function, such as "automatic tagging" and "answers recommendation" can also be add-ons for the app.
+
+## 3. Feature Engineering
+
+## 4. Base model
+
 
 Tired of stare at the screen search clues for debugging? Grab a cup of SODA.
 
