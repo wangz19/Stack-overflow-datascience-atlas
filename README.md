@@ -73,12 +73,12 @@ Currently, I am using a compose metric combining "number of answers" and "number
 
 The analysis provide detailed understand on what is a good and attractive question. Current analysis is bias by the different community, detailed clustering method will be performed to bias from languages and fields. Here is a word cloud for data science related tags.
 
-<img src="./pics/word_map.png" alt="WordCloud" width="500"/>
+<img src="./pics/word_attention.jpg" alt="WordCloud" width="500"/>
 
 ## 3. Feature Engineering
 Here, we perform further EDA and feature engineering, generate meta-data related to the title, the body text. I use beautifully soup to help me clean HTML format in the body text. Details can be found in this [kaggle kernel](https://www.kaggle.com/zehaiwang/nlp-stackoverflow).
 
-<img src="./pics/feature_corr.png" alt="Feature_compare" width="500"/>
+<img src="./pics/Feature_corr.png" alt="Feature_compare" width="500"/>
 
 We further generate 773580 TFIDF features with sklearn TFIDF_vectorizer, and feed them into the training data_set.
 
