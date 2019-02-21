@@ -29,6 +29,9 @@ This is the very first question we have to ask, in order to help the new users t
 
 <img src="./pics/metric_example.jpg" alt="metric example" width="600"/>
 
+
+<img src="./pics/corr_metric.png" alt="metric example" width="600"/>
+
 We can see that, the "Score", "View Count" have strong correlation, "answer_counts" has positive correlation to other metric. Whether a question will get satisfied answers. Interstingly, the rate to get a satisfied answer has negative relationship with comments count. It suggests that more comments indicating problems
 
 <img src="./pics/accept_ans.png" alt="metric example" width="600"/>
